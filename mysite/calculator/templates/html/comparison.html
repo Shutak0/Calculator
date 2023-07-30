@@ -1,0 +1,28 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block content%}
+    <header>
+        <div class="index_h1_div"> 
+            <h1 class="index_h1">
+                COMPARISON
+            </h1>
+        </div>
+        <div class="fo">
+            <div class="header_div">
+                <input name='sum1' placeholder="Loan size" id='Loansize1'>
+                <input name='percent1' placeholder="Percent" id='Percent1'>
+                <input name='time1' placeholder="Number of months" id='Months1'>
+            </div>
+            <p id="solution" class="solution">Your solution</p>
+            <div class="header_div">
+                <input name='sum2' placeholder="Loan size" id='Loansize2'>
+                <input name='percent2' placeholder="Percent" id='Percent2'>
+                <input name='time2' placeholder="Number of months" id='Months2'>
+            </div>
+        </div>
+        <div class="header_button">
+            <button id='funct1'>Count</button>
+        </div>
+    </header>
+<script src={% static 'js/scriptc.js' %}></script>
+{% endblock %}

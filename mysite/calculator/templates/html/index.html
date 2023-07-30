@@ -1,0 +1,21 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block content%}
+    <header>
+        <div class="index_h1_div"> 
+            <h1 class="index_h1">
+                CALCULATOR
+            </h1>
+        </div>
+        <div class="header_div">
+                <input type='text'  name='sum' placeholder="Loan size" id='Loansize'>
+                <input type='text'  name='percent' placeholder="Percent" id='Percent'>
+                <input type='text' name='time' placeholder="Number of months" id='Months'>
+                <p id="solution" class="solution">Your solution</p>
+        </div>
+        <div class="header_button">
+            <button id='funct' >Count</button>
+        </div>
+    </header>
+<script src={% static 'js/script.js' %}></script>
+{% endblock %}

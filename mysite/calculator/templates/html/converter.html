@@ -1,0 +1,47 @@
+{% extends 'html/base.html' %}
+{% load static %}
+{% block content%}
+    <header>
+        <div class="index_h1_div"> 
+            <h1 class="index_h1">
+                CONVERTER
+            </h1>
+        </div>
+        <div class="header_div">
+                <div class="sele">
+                    <select name="sel_from" id="sel_from" onChange='Functi()'>
+                        <option value='0' selected="selected">Choose currency</option>
+                        <option value='1'>Dollar</option>
+                        <option value='2'>Ruble</option>
+                        <option value='3'>Сrown</option>
+                    </select>
+                </div>
+                <input name='Num0' id='Num0' onChange='Functi()'>
+                <div class="sele">
+                    <select name="sel_to" id="sel_to" onChange='Functi()'>
+                        <option value='0' selected="selected">Choose currency</option>
+                        <option value='1'>Dollar</option>
+                        <option value='2'>Ruble</option>
+                        <option value='3'>Сrown</option>
+                    </select>
+                </div>
+        </div>
+        <div class="header_button">
+                    <p id='sol_sel'></p>
+                    <p id='apf'></p>
+        </div>
+    </header>
+    <section id='canv'>
+        <div class="index_h1_div"> 
+            <h1 class="index_h1">
+                COURSE LAST WEEK
+            </h1>
+        </div>
+        <div id='draw_div'>    
+            <button onClick='Draw()' id='but_draw'>Draw</button>
+            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+            </canvas>
+        </div>
+    </section>
+<script src={% static 'js/scripto.js' %}></script>
+{% endblock %}
